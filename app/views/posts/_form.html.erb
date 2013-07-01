@@ -1,0 +1,15 @@
+<%= form_for(@post) do |f| %>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= ('Title ' + @post.errors.messages[:title].join(', Title ')) unless @post.errors.messages[:title].blank? %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= ('Content ' + @post.errors.messages[:content].join(', Content ')) unless @post.errors.messages[:content].blank? %>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

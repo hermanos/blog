@@ -1,0 +1,31 @@
+<% @posts.each do |post| %>
+  <div class="post">
+    <h2>
+      <%= post.title %>
+    </h2>
+
+    <div class="meta">
+      Posted on:
+      <%= post.created_at.strftime("%F, %T") %>
+    </div>
+
+    <div class="content">
+      <%= post.content[0..100] unless post.content.nil? %>
+      <p>
+        <%= link_to 'Citeste mai mult...', post %>
+      </p>
+    </div>
+
+    <% unless session[:logged_in].nil? %>
+      <div class="actions">
+        <%= link_to 'Edit', edit_post_path(post) %>
+        |
+        <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      <% end %>
+  </div>
+<% end %>
+
+<% unless session[:logged_in].nil? %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>

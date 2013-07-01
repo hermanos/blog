@@ -1,0 +1,32 @@
+h2 {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+div.meta {
+  font-family: serif;
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+div.actions {
+  text-align: right;
+  margin-top: 10px;
+}
+
+div.post {
+  border-bottom: 1px solid #888;
+}
+
+.nav-pills>li>a:hover {
+/*  background-color: #008890;*/
+}
+
+#error_explanation h2 {
+  display: none;
+}
+
+.field_with_errors input, .field_with_errors textarea {
+  border: 1px solid red;
+}
