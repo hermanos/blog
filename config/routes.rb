@@ -1,5 +1,8 @@
 Blog::Application.routes.draw do
 
+  resources :comments
+
+
   get "pages/index"
   get "pages/contact", as: 'contact'
   get "pages/about", as: 'about'
